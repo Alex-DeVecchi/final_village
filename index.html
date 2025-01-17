@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="src/building.js"></script>
         <script src="src/main.js"></script>
-        <title>Lemonade Stand Simulator</title>
+        <script src="src/update.js"></script>
+        <title>Final Village</title>
     </head>
     <body>
-        <h1>Lemonade Stand Simulator</h1>
+        <h1>Final Village</h1>
         <h2>
-            It's a Hot Summer Day in South Florida and You Need Ice Cream
-            Money...
+            .....
         </h2>
 
         <h3>Score: <span class="score" id="score">0</span></h3>
@@ -23,8 +23,17 @@
         <button type="button" id="buyJuicer" onclick="juicer.purchase()">
             Buy Juicer
         </button>
-        <button type="button" id="buySuger" onclick="juicer.purchase()">
+        <button type="button" id="buySuger" onclick="suger.purchase()">
             Buy Suger
+        </button>
+
+        <button type="button" id="buyfireball" onclick="fireball.purchase()">
+            Buy fireball
+        </button>
+
+        <h4>Uprades:</h4>
+        <button type="button" id="buyfiremaster" onclick="firemaster.purchase()">
+            Buy firemaster
         </button>
     </body>
 </html>

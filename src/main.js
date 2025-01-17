@@ -1,28 +1,31 @@
 const tickRate = 1000 / 30;
+
 let score = 0;
 
-let juicer = new Building('Juicer', 0.1, 15, 'buyJuicer');
-let suger = new Building('Juicer', 1, 100, 'buySuger');
+let juicer = new Building("Juicer", 0.5, 15, "buyJuicer");
+let sugar = new Building('Sugar', 2, 100, 'buySugar');
+let fireball = new Building("Fireball", 10, 500, "buyFireball");
 
-function incScore() {
-    score += juicer.cps;
-    score += suger.cps;
-}
-
-function scorePlusPlus() {
+function scorePlusPlus(){
     score++;
 }
 
-function updateButtons(){
-score += juicer.cps;
-score += suger.cps;
+function incScore() {
+    score += juicer.cps;
+    score += sugar.cps;
+    score += fireball.cps;
 }
 
-function updatePage() {
+function updateButtons() {
+    juicer.buttonState();
+    sugar.buttonState();
+    fireball.buttonState();
+}
+
+function upatePage(){
     incScore();
     updateButtons();
-    document.getElementById('score').innerHTML =
-        '$' + Math.floor(score).toLocaleString();
+    document.getElementById("score").innerHTML = Math.floor(score).toLocaleString();
 }
 
-setInterval(updatePage, tickRate);
+setInterval(upatePage, tickRate);

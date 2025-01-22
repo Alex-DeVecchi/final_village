@@ -2,8 +2,8 @@ class Update {
     constructor(UpdateName, cost) {
         this.UpdateName = UpdateName;
         this.cost = cost;
-        this.cost = cost;
-        this.buttonId = "buy" + UpdateName;
+        this.buttonId = "buy" + UpdateName.replace(/\s/g, "");
+        this.owned = false;
     }
 
     purchase() {
@@ -12,6 +12,11 @@ class Update {
     }
 
     buttonState() {
+        if(this.owned){
+            document.getElementById(this.buttonId).style.display = 'none';
+        }
+
+
         if (!this.visible) {
             document.getElementById(this.buttonId).style.display = 'none';
             if (score >= this.cost) {

@@ -1,6 +1,6 @@
 class FireMaster extends Update{
-    constructor(UpdateName, cost, building){
-        super(UpdateName, cost);
+    constructor(updateName, cost, building){
+        super(updateName, cost);
         this.building = building;
     }
 
@@ -8,6 +8,6 @@ class FireMaster extends Update{
         super.purchase();
         clickStrength++;
         this.building.doubleUpgrade++;
-        this.building.applyUpgrade();
+        this.building.applyDoubleUpgrade();
     }
 }

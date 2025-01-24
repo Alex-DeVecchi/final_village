@@ -1,5 +1,5 @@
 class Building {
-    constructor(buildingName, baseCps, baseCost, buttonId) {
+    constructor(buildingName, baseCps, baseCost,) {
         this.buildingName = buildingName;
         this.baseCps = baseCps / (1000 / tickRate);
         this.baseCost = baseCost;
@@ -39,6 +39,6 @@ class Building {
         }
 
         document.getElementById(this.buttonId).innerHTML = 'Buy ' + this.buildingName + ' (Cost: $' + Math.ceil(this.cost).toLocaleString() +') <br> Adds $' +
-            (this.baseCps * (1000 / tickRate)).toLocaleString() + ' Per Second <br> [Owned: ' + this.amountOwned + ']';
+            (this.baseCps * this.doubleUpgrade * (1000 / tickRate)).toLocaleString() + ' Per Second <br> [Owned: ' + this.amountOwned + ']';
     }
 }

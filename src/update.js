@@ -2,7 +2,7 @@ class Update {
     constructor(UpdateName, cost) {
         this.UpdateName = UpdateName;
         this.cost = cost;
-        this.buttonId = "buy" + UpdateName.replace(/\s/g, "");
+        this.buttonId =  'buy' + UpdateName.replace(/\s/g, '');
         this.owned = false;
     }
 
@@ -32,7 +32,6 @@ class Update {
             document.getElementById(this.buttonId).disabled = false;
         }
 
-        document.getElementById(this.buttonId).innerHTML = 'Buy ' + this.UpdateName + ' (Cost: $' + Math.ceil(this.cost).toLocaleString() +') <br> Adds $' +
-            (this.baseCps * (1000 / tickRate)).toLocaleString() + ' Per Second <br> [Owned: ' + this.amountOwned + ']';
+        document.getElementById(this.buttonId).innerHTML = 'Buy ' + this.UpdateName + ' (Cost: $' + Math.ceil(this.cost).toLocaleString() +')';
     }
 }

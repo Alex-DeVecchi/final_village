@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/style.css">
         <script src="src/build.js"></script>
         <script src="src/update.js"></script>
         <script src="src/firemaster.js"></script>
@@ -10,30 +11,46 @@
         <title>Final Village</title>
     </head>
     <body>
-        <h1>Final Village</h1>
-        <h2>
-            .....
-        </h2>
+        <header>
+            <h1>Final Village</h1>
+            <h2>
+                You are your last village hope...
+            </h2>
+        </header>
 
+        <div class="outer">
+            <div class="click">
         <h3>Score: <span class="score" id="score">0</span></h3>
 
         <button type="button" onclick="scorePlusPlus()">Click Me!</button>
+    </div>
 
+    <div class="store">
+        <div class="buildings">
+            <div class="store-title">
         <h4>Buildings:</h4>
+            </div>
 
-        <button type="button" id="buyJuicer" onclick="juicer.purchase()">
+        <button class="button" type="button" id="buyJuicer" onclick="juicer.purchase()">
             Buy Juicer
         </button>
-        <button type="button" id="buySugar" onclick="sugar.purchase()">
+        <button class="button" type="button" id="buySugar" onclick="sugar.purchase()">
             Buy Suger
         </button>
 
-        <button type="button" id="buyFireball" onclick="fireball.purchase()">
+        <button class="button" type="button" id="buyFireball" onclick="fireball.purchase()">
             Buy fireball
         </button>
+    </div>
 
+    <div class="uprades">
+        <div class="store-title">
         <h4>Uprades:</h4>
-        <button type="button" id="buyFiremasterI" onclick="firemaster1.purchase()"></button>
+    </div>
+        <button class="button" type="button" id="buyFiremasterI" onclick="firemaster1.purchase()"></button>
         </button>
+    </div>
+    </div>
+    </div>
     </body>
 </html>

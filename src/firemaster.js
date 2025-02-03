@@ -1,4 +1,4 @@
-class FireMaster extends Update{
+class SwordMaster extends Update{
     constructor(updateName, cost, building){
         super(updateName, cost);
         this.building = building;

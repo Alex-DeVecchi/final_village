@@ -12,6 +12,9 @@ let zap = new Building("Zap", 500, 6000, "buyZap");
 
 let swordmaster1 = new SwordMaster("Swordmaster I", 100 , slash);
 let swordmaster2 = new SwordMaster("Swordmaster II", 250, slash);
+let swordmaster3 = new SwordMaster("Swordmaster II", 250, slash);
+let swordmaster4 = new SwordMaster("Swordmaster II", 250, slash);
+let swordmaster5 = new SwordMaster("Swordmaster II", 250, slash);
 let watermaster1 = new master1("Watermaster I", 450, waterGun);
 let firemaster1 = new master1("Firemaster I", 1000, fireball);
 let earthmaster1 = new master1("Earthmaster I", 1500, rockThrow);
@@ -44,6 +47,9 @@ function updateButtons() {
 
     swordmaster1.buttonState();
     swordmaster2.buttonState();
+    swordmaster3.buttonState();
+    swordmaster4.buttonState();
+    swordmaster5.buttonState();
     watermaster1.buttonState();
     firemaster1.buttonState();
     earthmaster1.buttonState();

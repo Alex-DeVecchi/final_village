@@ -2,25 +2,31 @@ const tickRate = 1000 / 30;
 let clickStrength = 1;
 let score = 60000;
 
-let slash = new Building("Slash", 0.5, 15, "buySlash");
-let waterGun = new Building('WaterGun', 2, 100, 'buyWaterGun');
+let slash = new Building("Slash", 1, 15, "buySlash");
+let waterGun = new Building('WaterGun', 3, 100, 'buyWaterGun');
 let fireball = new Building("Fireball", 10, 500, "buyFireball");
 let rockThrow = new Building("RockThrow", 25, 1000,"buyRockThrow");
 let windBlow = new Building("WindBlow", 75, 2000, "buyWindBlow");
 let poisonThrow = new Building("PoisonThrow", 200, 4000,"buyPoisonThrow");
 let zap = new Building("Zap", 500, 6000, "buyZap");
+let darkness = new Building("Darkness", 2000, 15000, "buyDarkness");
 
 let swordmaster1 = new SwordMaster("Swordmaster I", 100 , slash);
 let swordmaster2 = new SwordMaster("Swordmaster II", 250, slash);
-let swordmaster3 = new SwordMaster("Swordmaster II", 250, slash);
-let swordmaster4 = new SwordMaster("Swordmaster II", 250, slash);
-let swordmaster5 = new SwordMaster("Swordmaster II", 250, slash);
-let watermaster1 = new master1("Watermaster I", 450, waterGun);
-let firemaster1 = new master1("Firemaster I", 1000, fireball);
-let earthmaster1 = new master1("Earthmaster I", 1500, rockThrow);
-let airmaster1 = new master1("Airmaster I", 3000, windBlow);
-let toxicmaster1 = new master1("Toxicmaster I", 5000, poisonThrow);
-let lightningmaster1 = new master1("Lightningmaster I", 7000, zap);
+let swordmaster3 = new SwordMaster("Swordmaster III", 500, slash);
+let swordmaster4 = new SwordMaster("Swordmaster IV", 900, slash);
+let swordmaster5 = new SwordMaster("Swordmaster V", 1250, slash);
+let watermaster1 = new master("Watermaster I", 450, waterGun);
+let flare = new master("Flare", 1000, fireball);
+let phoenixBreath = new master("Phoenix Breath", 1500, fireball);
+let burstWheel = new master("Burst Wheel", 2250, fireball);
+let heatwave = new master("Heatwave", 3750, fireball);
+let prometheus = new master("Prometheus", 5000, fireball);
+let earthmaster1 = new master("Earthmaster I", 1500, rockThrow);
+let airmaster1 = new master("Airmaster I", 3000, windBlow);
+let toxicmaster1 = new master("Toxicmaster I", 5000, poisonThrow);
+let lightningmaster1 = new master("Lightningmaster I", 7000, zap);
+let darkmaster1 = new master("Darkmaster I", 20000, darkness);
 
 function scorePlusPlus(){
     score += clickStrength;
@@ -34,6 +40,7 @@ function incScore() {
     score += windBlow.cps;
     score += poisonThrow.cps;
     score += zap.cps;
+    score += darkness.cps;
 }
 
 function updateButtons() {
@@ -44,6 +51,7 @@ function updateButtons() {
     windBlow.buttonState();
     poisonThrow.buttonState();
     zap.buttonState();
+    darkness.buttonState();
 
     swordmaster1.buttonState();
     swordmaster2.buttonState();
@@ -51,11 +59,17 @@ function updateButtons() {
     swordmaster4.buttonState();
     swordmaster5.buttonState();
     watermaster1.buttonState();
-    firemaster1.buttonState();
+    flare.buttonState();
+    phoenixBreath.buttonState();
+    burstWheel.buttonState();
+    heatwave.buttonState();
+    prometheus.buttonState();
     earthmaster1.buttonState();
     airmaster1.buttonState();
     toxicmaster1.buttonState();
     lightningmaster1.buttonState();
+    darkmaster1.buttonState();
+
 }
 
 function upatePage(){

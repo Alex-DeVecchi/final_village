@@ -16,15 +16,33 @@ let swordmaster2 = new SwordMaster("Swordmaster II", 250, slash);
 let swordmaster3 = new SwordMaster("Swordmaster III", 500, slash);
 let swordmaster4 = new SwordMaster("Swordmaster IV", 900, slash);
 let swordmaster5 = new SwordMaster("Swordmaster V", 1250, slash);
-let watermaster1 = new master("Watermaster I", 450, waterGun);
+
+let aqua = new master("Aqua", 450, waterGun);
+let waterSlicer = new master("Water Slicer", 950, waterGun);
+let waterVortex = new master("Water Vortex", 1300, waterGun);
+let waterManipulation = new master("Water Manipulation", 1550, waterGun);
+let seaSerpents = new master("Sea Serpents", 1750, waterGun);
+
 let flare = new master("Flare", 1000, fireball);
-let phoenixBreath = new master("Phoenix Breath", 1500, fireball);
+let phoenixBreath = new master("Phoenix Breath", 1600, fireball);
 let burstWheel = new master("Burst Wheel", 2250, fireball);
 let heatwave = new master("Heatwave", 3750, fireball);
 let prometheus = new master("Prometheus", 5000, fireball);
-let earthmaster1 = new master("Earthmaster I", 1500, rockThrow);
-let airmaster1 = new master("Airmaster I", 3000, windBlow);
+
+let rockCrush = new master("Rock Crush", 1500, rockThrow);
+let terraStake = new master("Terra Stake", 1750, rockThrow);
+let earthBomb = new master("Earth Bomb", 2500, rockThrow);
+let earthquake = new master("Earthquake", 3500, rockThrow);
+let rockslide = new master("Rockslide", 5000, rockThrow);
+
+let gust = new master("Gust", 3000, windBlow);
+let aeroslash = new master("Aeroslash", 3000, windBlow);
+let windBlast = new master("Wind Blast", 3550, windBlow);
+let hurricane = new master("Hurricane", 5500, windBlow);
+let numinesWrath = new master("Numine's Wrath", 6000, windBlow);
+
 let toxicmaster1 = new master("Toxicmaster I", 5000, poisonThrow);
+
 let lightningmaster1 = new master("Lightningmaster I", 7000, zap);
 let darkmaster1 = new master("Darkmaster I", 20000, darkness);
 
@@ -58,14 +76,31 @@ function updateButtons() {
     swordmaster3.buttonState();
     swordmaster4.buttonState();
     swordmaster5.buttonState();
-    watermaster1.buttonState();
+
+    aqua.buttonState();
+    waterSlicer.buttonState();
+    waterVortex.buttonState();
+    waterManipulation.buttonState();
+    seaSerpents.buttonState();
+
     flare.buttonState();
     phoenixBreath.buttonState();
     burstWheel.buttonState();
     heatwave.buttonState();
     prometheus.buttonState();
-    earthmaster1.buttonState();
-    airmaster1.buttonState();
+
+    rockCrush.buttonState();
+    terraStake.buttonState();
+    earthBomb.buttonState();
+    earthquake.buttonState();
+    rockslide.buttonState();
+
+    gust.buttonState();
+    aeroslash.buttonState();
+    windBlast.buttonState();
+    hurricane.buttonState();
+    numinesWrath.buttonState();
+
     toxicmaster1.buttonState();
     lightningmaster1.buttonState();
     darkmaster1.buttonState();

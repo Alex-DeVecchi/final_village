@@ -1,6 +1,6 @@
 const tickRate = 1000 / 30;
 let clickStrength = 1;
-let score = 60000;
+let score = 0;
 
 let slash = new Building("Slash", 1, 15, "buySlash");
 let waterGun = new Building('WaterGun', 3, 100, 'buyWaterGun');

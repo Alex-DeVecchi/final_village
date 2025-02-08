@@ -35,7 +35,7 @@ let earthBomb = new master("Earth Bomb", 2500, rockThrow);
 let earthquake = new master("Earthquake", 3500, rockThrow);
 let rockslide = new master("Rockslide", 5000, rockThrow);
 
-let gust = new master("Gust", 3000, windBlow);
+let gust = new master("Gust", 2500, windBlow);
 let aeroslash = new master("Aeroslash", 3000, windBlow);
 let windBlast = new master("Wind Blast", 3550, windBlow);
 let hurricane = new master("Hurricane", 5500, windBlow);
